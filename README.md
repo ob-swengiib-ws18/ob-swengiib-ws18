@@ -1,9 +1,5 @@
-# Software Engineering I (IB) --- WS 18/19
+# Jonas Brosch
 
-- Git Basics
+## Kenntnisse in der Webentwicklung
 
-- Git Flow
-
-- GitHub Flow
-
-- überall ist es toll
+Leider habe ich noch keine. Mit HTML und CSS habe ich aber schon einmal herumgespielt.
