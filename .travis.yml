@@ -10,7 +10,7 @@ before_install:
   - mkdir output
 
 script:
-  - plantuml -ooutput -tsvg UML/*.puml
+  - plantuml -o../output -tsvg UML/*.puml
 
 before_deploy:
   - git tag "$(TZ=Europe/Berlin date +'%Y-%m-%d/%H_%M_%S')"
