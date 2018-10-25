@@ -1,0 +1,6 @@
+@startuml
+
+actor Administrator
+Administrator - [System]
+
+@enduml

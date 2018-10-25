@@ -1,0 +1,6 @@
+@startuml
+actor Admin
+Admin -> jettyServer : starte Server
+jettyServer -> server: Authentication Request
+
+@enduml
