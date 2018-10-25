@@ -1,0 +1,23 @@
+os: osx
+
+branches:
+  except:
+  - /^\d+-\d+-\d+\/\d+_\d+_\d+$/
+
+before_install:
+  - brew update > /dev/null 2>&1
+  - brew install plantuml
+  - mkdir output
+
+script:
+  - plantuml -ooutput -tsvg UML/*.puml
+
+before_deploy:
+  - git tag "$(TZ=Europe/Berlin date +'%Y-%m-%d/%H_%M_%S')"
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file_glob: true
+  file: output/*
+  skip_cleanup: true
