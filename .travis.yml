@@ -5,8 +5,7 @@ branches:
   - /^\d+-\d+-\d+\/\d+_\d+_\d+$/
 
 before_install:
-  - brew update > /dev/null 2>&1
-  - brew install plantuml
+  - HOMEBREW_NO_AUTO_UPDATE=1 brew install plantuml
   - mkdir output
 
 script:
