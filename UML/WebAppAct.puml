@@ -1,6 +1,6 @@
 @startuml
 
-(*)  --> "Starte\nJetty Server"
--->(*)
+(*)  -> "Starte\nJetty Server"
+-> (*)
 
 @enduml

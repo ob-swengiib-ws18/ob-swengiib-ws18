@@ -1,0 +1,9 @@
+@startuml
+scale 750 height
+[*] --> erzeugt
+erzeugt --> gestartet: start()
+gestartet --> wartend: join()
+wartend --> [*]: kill()
+wartend --> gestartet: restart()
+
+@enduml

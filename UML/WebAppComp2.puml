@@ -1,0 +1,28 @@
+@startuml
+
+package "Jetty Server" {
+interface LifeCycle {
+    +start()
+}
+
+class Server {
+    +Server(port: int)
+    +join()
+}
+
+Server ..|> LifeCycle
+
+}
+
+package "Server-Tester" {
+    class JettyStarter {
+        {static} +main()
+    }
+
+}
+
+JettyStarter .> Server
+
+
+
+@enduml

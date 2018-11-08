@@ -1,0 +1,26 @@
+@startuml
+
+
+
+actor Administrator
+Administrator -> ":JettyStarter": starte Server
+activate ":JettyStarter"
+
+create ":Server"
+":JettyStarter" -> ":Server": new Server(8080)
+
+":JettyStarter" -> ":Server" : start()
+activate ":Server"
+
+":Server" --> ":JettyStarter"
+deactivate ":Server"
+
+":JettyStarter" -> ":Server" : join()
+activate ":Server"
+
+":Server" --> ":JettyStarter"
+deactivate ":Server"
+
+deactivate ":JettyStarter"
+
+@enduml
